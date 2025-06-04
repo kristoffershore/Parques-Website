@@ -11,7 +11,6 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
@@ -23,56 +22,62 @@
       background: linear-gradient(135deg, #a8e063, #56ab2f); /* Nature-inspired gradient */
       color: #ffffff;
     }
-
     h1 {
       font-size: 2.5rem;
       margin-bottom: 2rem;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
-
     .links {
       display: flex;
       gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-
     .links a {
       text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      display: block;
       transition: transform 0.2s, box-shadow 0.2s;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     }
-
-    .links a.android {
-      background-color: #3ddc84; /* Android green */
-      color: #ffffff;
-    }
-
-    .links a.ios {
-      background-color: #007aff; /* iOS blue */
-      color: #ffffff;
-    }
-
     .links a:hover {
       transform: translateY(-4px);
       box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
     }
-
+    .links a img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+    .app-store-badge {
+      width: 170px;
+      height: 57px;
+    }
+    .google-play-badge {
+      width: 190px;
+      height: 73px;
+    }
     footer {
       margin-top: 2rem;
       font-size: 0.9rem;
       opacity: 0.8;
     }
-
     @media (max-width: 600px) {
       h1 {
         font-size: 2rem;
       }
-      .links a {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
+      .app-store-badge {
+        width: 140px;
+        height: 47px;
+      }
+      .google-play-badge {
+        width: 160px;
+        height: 62px;
+      }
+      .links {
+        gap: 1rem;
       }
     }
   </style>
@@ -80,8 +85,18 @@
 <body>
   <h1>Discover the Beauty of Our City Parks</h1>
   <div class="links">
-    <a href="https://play.google.com/store/apps/details?id=com.duvalwhatmakesyouhappy.parquesapp&hl=en_US" class="android" target="_blank">Get it on Android</a>
-    <a href="https://apps.apple.com/us/app/jacksonville-parques/id6746373750" class="ios" target="_blank">Get it on iPhone</a>
+    <a href="https://play.google.com/store/apps/details?id=com.duvalwhatmakesyouhappy.parquesapp&hl=en_US" target="_blank">
+      <img src="https://static.wixstatic.com/media/5ea6f7_a08669d852a94b5b943ec2e545c9e380~mv2.png/v1/fill/w_218,h_84,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5ea6f7_a08669d852a94b5b943ec2e545c9e380~mv2.png" 
+           alt="Get it on Google Play" 
+           class="google-play-badge"
+           srcset="https://static.wixstatic.com/media/5ea6f7_a08669d852a94b5b943ec2e545c9e380~mv2.png/v1/fill/w_218,h_84,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5ea6f7_a08669d852a94b5b943ec2e545c9e380~mv2.png 1x, https://static.wixstatic.com/media/5ea6f7_a08669d852a94b5b943ec2e545c9e380~mv2.png/v1/fill/w_436,h_168,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5ea6f7_a08669d852a94b5b943ec2e545c9e380~mv2.png 2x">
+    </a>
+    <a href="https://apps.apple.com/us/app/jacksonville-parques/id6746373750" target="_blank">
+      <img src="https://static.wixstatic.com/media/5ea6f7_793b07cdc93a4b2c936026903a33d310~mv2.png/v1/fill/w_170,h_57,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5ea6f7_793b07cdc93a4b2c936026903a33d310~mv2.png" 
+           alt="Download on the App Store" 
+           class="app-store-badge"
+           srcset="https://static.wixstatic.com/media/5ea6f7_793b07cdc93a4b2c936026903a33d310~mv2.png/v1/fill/w_170,h_57,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5ea6f7_793b07cdc93a4b2c936026903a33d310~mv2.png 1x, https://static.wixstatic.com/media/5ea6f7_793b07cdc93a4b2c936026903a33d310~mv2.png/v1/fill/w_340,h_114,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5ea6f7_793b07cdc93a4b2c936026903a33d310~mv2.png 2x">
+    </a>
   </div>
   <footer>
     &copy; 2025 Parques App. All rights reserved.
